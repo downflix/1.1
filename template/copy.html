@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>TheDownflix</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/favicon.png'%}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png'%}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css'%}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'css/main.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: QuickStart
+  * Template URL: https://bootstrapmade.com/quickstart-bootstrap-startup-website-template/
+  * Updated: May 18 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">TheDownflix</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}" class="">Home</a></li>
+          <li><a href="{% url 'index' %}#about">About Us</a></li>
+          <li><a href="{% url 'index' %}#features">FAQ</a></li>
+          <li><a href="{% url 'copy' %}">Copyrights</a></li>  
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section>
+        <div class="terms-container">
+                <header class="terms-header">
+                    <h2>Copyright</h2>
+                    <p>TheDownFlix respects the intellectual property rights of others and requests you to do the same. We do not permit the infringement of intellectual property rights on our platform. Upon receiving proper notification, TheDownFlix will promptly restrict publicly available content from being converted and downloaded using our service.</p>
+                </header>
+    
+            
+            <div class="terms-section">
+                <h2>Copyright Holders and Content Creators</h2>
+                <p>If you are a content creator, copyright owner, or an authorized agent acting on their behalf, and you wish to prevent the use of TheDownFlix to convert or download specific content, please submit a formal request via email at <a href="mailto:contact@thedownflix.com">contact@thedownflix.com</a> with the following details:</p>
+                <ul>
+                <li><strong>Content Details:</strong> The URL(s) and a description of the content you want us to block.</li>
+                <li><strong>Proof of Authorization:</strong> Electronic or physical evidence that you have the right to act on behalf of the copyright owner.</li>
+                <li><strong>Contact Information:</strong> A valid email address and/or phone number where we can reach you.</li>
+                </ul>
+                <p>We will blacklist the requested content in our system within 48 hours of receiving and verifying your request.</p>
+            </div>
+            
+            <div class="terms-section">
+                <h2>General Notice</h2>
+                <p>TheDownFlix values the creative efforts of all content creators and supports compliance with intellectual property laws. We encourage users to respect these rights and abide by applicable copyright laws.</p>
+            </div>
+            
+            <div class="terms-section">
+                <h2>Content Ownership and Copyright Compliance</h2>
+                <p>All videos, music, images, and other content downloaded via TheDownFlix remain the property of their respective copyright owners. By using our service, users accept full responsibility for any copyright infringement that may arise from the unauthorized use or distribution of such content.</p>
+            </div>
+            
+            <div class="terms-section">
+                <h2>Intended Use</h2>
+                <p>TheDownFlix service is designed for personal, non-commercial use only. Redistribution, reproduction, public display, or performance of downloaded content without prior permission from the copyright owner is strictly prohibited.</p>
+            </div>
+            
+            <div class="terms-section">
+                <h2>Liability Disclaimer</h2>
+                <p>TheDownFlix does not host copyrighted content on its servers and does not condone or facilitate the illegal distribution of copyrighted material. Users are solely responsible for ensuring the legality of their actions when using the service.</p>
+            </div>
+            
+            <div class="terms-section">
+                <h2>Copyright Infringement and Content Removal</h2>
+                <p>If you believe that content you own has been improperly downloaded using TheDownFlix, please notify us at <a href="mailto:thedownflix@gmail.com">thedownflix@gmail.com</a>. We are committed to collaborating with copyright holders to resolve any issues, which may include blacklisting the requested content.</p>
+            </div>
+            
+            <div class="terms-section">
+                <h2>Contact Information</h2>
+                <p>For copyright-related inquiries or content removal requests, please reach out to us at:</p>
+                <p>Email: <a href="mailto:thedownflix@gmail.com">thedownflix@gmail.com</a></p>
+            </div>
+            
+            <div class="terms-section">
+                <h2>Final Reminder</h2>
+                <p>Downloading and using copyrighted content without appropriate permissions may have legal consequences. We strongly urge users to act responsibly and ensure they have the necessary rights or permissions to use any material obtained through TheDownFlix.</p>
+            </div>
+          
+        </div>
+
+      </section>
+  </main>
+
+  <footer id="footer" class="footer position-relative">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="#hero" class="logo d-flex align-items-center">
+            <span class="sitename">TheDownFlix</span>
+          </a>
+    
+       
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#features">FAQ</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <ul>
+            <li><a href="{% url 'terms' %}"> Terms of Use</a></li>
+            <li><a href="{% url 'copy' %}"> Copyright</a></li>
+            <li><a href="{% url 'privacy' %}"> Privacy Policy</a></li>
+
+          </ul>
+        </div>
+
+      
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">TheDownFlix</strong><span></span></p>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js'%}"></script>
+  <script src="{% static 'vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js'%}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js'%}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'js/main.js'%}"></script>
+
+ 
+</body>
+
+</html>

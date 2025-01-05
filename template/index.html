@@ -1,0 +1,514 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>TheDownflix</title>
+  <meta name="description" content="At TheDownFlix, effortlessly download videos from any website—whether in bulk or selectively. Save time and focus on what matters most while we handle video downloading hassle-free.">
+  <meta name="keywords" content="video downloader, bulk video download, download videos from websites, TheDownFlix, online video downloader, fast video download, selective video download, download tool, hassle-free video download">
+  
+
+  <!-- Favicons -->
+  <link href="{% static 'img/lo.webp'%}" rel="icon">
+  <link href="{% static 'img/lo.webp'%}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css'%}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'css/main.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: QuickStart
+  * Template URL: https://bootstrapmade.com/quickstart-bootstrap-startup-website-template/
+  * Updated: May 18 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="#" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">TheDownflix</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#features">FAQ</a></li>
+          <li><a href="{% url 'copy' %}">Copyrights</a></li>  
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="hero-bg">
+        <img src="{% static 'img/bgg.svg'%}" alt="">
+      </div>
+      <div class="container text-center">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <h1 data-aos="fade-up" class="">TheDownflix</h1>
+          <p data-aos="fade-up" data-aos-delay="100" class="">A Euphoria for Videos.<br></p>
+     
+            <div class="search-bar" data-aos="fade-up" data-aos-delay="200">
+              <input type="text" id="urlInput" placeholder="Enter the link" />
+              <button onclick="fetchVideos()">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/1024px-Magnifying_glass_icon.svg.png" alt="Search" />
+              </button>
+            </div>
+          
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+
+    <section id="download" class="section">
+      <div class="container">
+        <div class="row">
+          <!-- Left Dropdown -->
+          <div class="col-left">
+            <label for="media-type">Select Media Type:</label>
+            <select id="media-type" class="dropdown">
+              <option value="videos">Videos</option>
+            </select>
+          </div>
+          
+          <!-- Right Buttons -->
+          <div class="col-right">
+            <button id="select-all" class="btn">Select All</button>
+            <button id="download-all" class="btn">Download</button>
+          </div>
+        </div>
+    
+        <!-- Media Display -->
+        <div id="videos" class="videos-container"></div>
+        <div id="pagination" class="pagination-container"></div>
+      </div>
+    </section>
+    
+
+
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+
+          <div class="" data-aos="fade-up" data-aos-delay="100">
+            <p class="who-we-are">Who We Are</p>
+            <h3>Simplifying Video Downloads for a Seamless Digital Experience</h3>
+            <p class="">
+              
+            In today’s digital age, videos are vital for communication, entertainment, and education, yet downloading them remains tedious and frustrating. 
+            Users struggle with unreliable tools, time-consuming processes, and restrictions that disrupt access to multiple videos.
+            </p>
+            
+            <p>At TheDownFlix, we simplify this process, allowing you to download all videos from any website effortlessly—whether in bulk or selectively. 
+              Focus on what matters most, and let us handle the hassle of video downloading.</p>
+          </div>
+
+    
+
+
+      </div>
+    </section><!-- /About Section -->
+
+    
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <div class="container">
+
+        <div class="row g-5">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-cyan position-relative">
+              <i class="bi bi-emoji-smile icon"></i>
+              <div>
+                <h3>No Downloads, No Hassles</h3>
+                <p>With TheDownFlix, everything operates seamlessly online. Forget about complex software or cluttering your device.
+                   Download all videos from any website quickly and safely, directly from your browser!</p>
+               
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item  item-teal position-relative">
+              <i class="bi bi-cash-coin icon"></i>
+              <div>
+                <h3>Absolutely Free</h3>
+                <p>Enjoy unlimited video downloads from any website without spending a dime. TheDownFlix is committed to providing a safe, fast, and cost-free service for all users. 
+                  Download videos easily and securely, directly from your browser!</p>
+              
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item item-orange position-relative">
+              <i class="bi bi-cloud-arrow-down icon"></i>
+              <div>
+                <h3>Fastly Downloads</h3>
+                <p> you can download all the videos from any website in bulk—no need to download one by one.
+                   Save time and effort with our fast, seamless service, allowing you to download multiple videos at once</p>
+                
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item item-red position-relative">
+              <i class="bi bi-person-slash icon"></i>
+              <div>
+                <h3>No Sign-up Required</h3>
+                <p>no sign-up or account needed. Enjoy a quick, hassle-free experience Your ease of access and privacy are our top priorities.</p>
+                
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+         
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="">How to download video from online via TheDownFlix</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row justify-content-between">
+
+          <div class="col-lg-5 d-flex align-items-center">
+
+            <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
+                  <i class="bi bi-link"></i>
+                  <div>
+                    <h4 class="d-none d-lg-block">Paste the Link</h4>
+                    <p>
+                      Copy the URL of the website with the videos you want to download.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
+                  <i class="bi bi-check-square"></i> 
+                  <div>
+                    <h4 class="d-none d-lg-block">Select Your Videos</h4>
+                    <p>
+                      Choose all videos or select specific ones you wish to download.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
+                  <i class="bi bi-download"></i> 
+                  <div>
+                    <h4 class="d-none d-lg-block">Download Instantly</h4>
+                    <p>
+                      Click to start the download process, and all videos will be saved to your device quickly and easily!
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul><!-- End Tab Nav -->
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="tab-pane fade active show" id="features-tab-1">
+                <img src="{% static 'img/2.png'%}" alt="" class="img-fluid">
+              </div><!-- End Tab Content Item -->
+
+              <div class="tab-pane fade" id="features-tab-2">
+                <img src="{% static 'img/3.png'%}" alt="" class="img-fluid">
+              </div><!-- End Tab Content Item -->
+
+              <div class="tab-pane fade" id="features-tab-3">
+                <img src="{% static 'img/1.png'%}" alt="" class="img-fluid">
+              </div><!-- End Tab Content Item -->
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+
+
+  </main>
+
+  <footer id="footer" class="footer position-relative">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="#hero" class="logo d-flex align-items-center">
+            <span class="sitename">TheDownFlix</span>
+          </a>
+    
+       
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#features">FAQ</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <ul>
+            <li><a href="{% url 'terms' %}"> Terms of Use</a></li>
+            <li><a href="{% url 'copy' %}"> Copyright</a></li>
+            <li><a href="{% url 'privacy' %}"> Privacy Policy</a></li>
+
+          </ul>
+        </div>
+
+      
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">TheDownFlix</strong><span></span></p>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js'%}"></script>
+  <script src="{% static 'vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js'%}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js'%}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'js/main.js'%}"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script>
+    const videosPerPage = 10;
+    let currentPage = 1;
+    let videos = [];
+    
+    async function fetchVideos() {
+        const url = document.getElementById('urlInput').value;
+        try {
+            const response = await fetch('/fetch-videos/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCsrfToken(),
+                },
+                body: JSON.stringify({ url }),
+            });
+    
+            if (!response.ok) {
+                throw new Error('Failed to fetch videos');
+            }
+    
+            const data = await response.json();
+            if (!data.videos || data.videos.length === 0) {
+                alert('No videos found.');
+                return;
+            }
+    
+            videos = data.videos;
+            currentPage = 1;
+            displayVideos();
+            displayPagination();
+            
+        } catch (error) {
+            console.error('Error fetching videos:', error);
+            alert('An error occurred while fetching videos.');
+        }
+    }
+    
+    function displayVideos() {
+      const videosContainer = document.getElementById('videos');
+      videosContainer.innerHTML = '';
+  
+      const start = (currentPage - 1) * videosPerPage;
+      const end = start + videosPerPage;
+      const videosToDisplay = videos.slice(start, end);
+  
+      videosToDisplay.forEach((videoURL, index) => {
+          const videoCard = document.createElement('div');
+          videoCard.classList.add('video-card');
+          videoCard.innerHTML = `
+              <input type="checkbox" class="video-checkbox" value="${videoURL}" id="video-${start + index}">
+              <label for="video-${start + index}">
+                  <video controls>
+                      <source src="${videoURL}" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video>
+              </label>
+          `;
+          videosContainer.appendChild(videoCard);
+      });
+  }
+  
+
+
+    
+    function displayPagination() {
+        const paginationContainer = document.getElementById('pagination');
+        paginationContainer.innerHTML = '';
+    
+        const totalPages = Math.ceil(videos.length / videosPerPage);
+    
+        for (let i = 1; i <= totalPages; i++) {
+            const button = document.createElement('button');
+            button.classList.add('pagination-button');
+            button.textContent = i;
+            if (i === currentPage) {
+                button.classList.add('disabled');
+            }
+            button.addEventListener('click', () => {
+                currentPage = i;
+                displayVideos();
+                displayPagination();
+            });
+            paginationContainer.appendChild(button);
+        }
+    }
+    
+    function getCsrfToken() {
+        const cookies = document.cookie.split('; ');
+        for (const cookie of cookies) {
+            if (cookie.startsWith('csrftoken=')) {
+                return cookie.split('=')[1];
+            }
+        }
+        return '';
+    }
+    
+</script>
+
+
+<script>
+  const selectAllButton = document.getElementById('select-all');
+
+  selectAllButton.addEventListener('click', () => {
+      const checkboxes = document.querySelectorAll('.video-checkbox');
+      checkboxes.forEach((checkbox) => {
+          checkbox.checked = true;
+      });
+  });
+</script>
+
+
+<script>
+  async function downloadSelectedVideos() {
+      const selectedVideos = Array.from(document.querySelectorAll('input.video-checkbox:checked'))
+          .map(input => input.value);
+  
+      if (selectedVideos.length === 0) {
+          alert('No videos selected.');
+          return;
+      }
+  
+      if (selectedVideos.length === 1) {
+          // Directly download the single video
+          const link = document.createElement('a');
+          link.href = selectedVideos[0];
+          link.download = selectedVideos[0].split('/').pop();
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+      } else {
+          // Zip multiple selected videos
+          const zip = new JSZip();
+          const folder = zip.folder('videos');
+  
+          // Fetch and add each video to the zip
+          const videoPromises = selectedVideos.map(async videoURL => {
+              const response = await fetch(videoURL);
+              const blob = await response.blob();
+              const fileName = videoURL.split('/').pop();
+              folder.file(fileName, blob);
+          });
+  
+          try {
+              // Wait for all videos to be added to the zip
+              await Promise.all(videoPromises);
+  
+              // Generate the zip file
+              const content = await zip.generateAsync({ type: 'blob' });
+  
+              // Trigger the zip file download
+              const link = document.createElement('a');
+              link.href = URL.createObjectURL(content);
+              link.download = 'selected_videos.zip';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+          } catch (error) {
+              console.error('Error zipping files:', error);
+              alert('An error occurred while zipping the files.');
+          }
+      }
+  }
+  
+  // Add event listener for the "Download Selected Videos" button
+  document.getElementById('download-all').addEventListener('click', downloadSelectedVideos);
+  </script>
+
+</body>
+
+</html>

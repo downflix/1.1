@@ -1,0 +1,198 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>TheDownflix</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/favicon.png'%}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png'%}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css'%}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'css/main.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: QuickStart
+  * Template URL: https://bootstrapmade.com/quickstart-bootstrap-startup-website-template/
+  * Updated: May 18 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">TheDownflix</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}" class="">Home</a></li>
+          <li><a href="{% url 'index' %}#about">About Us</a></li>
+          <li><a href="{% url 'index' %}#features">FAQ</a></li>
+          <li><a href="{% url 'copy' %}">Copyrights</a></li>  
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section>
+      <div class="terms-container">
+        <header class="terms-header">
+          <h1>Privacy Policy</h1>
+          <p>Welcome to TheDownFlix (thedownflix.com). We recognize that privacy online is critical for our users, especially when accessing and using our services. This statement outlines our privacy policies concerning users of the Site ("Visitors") who browse without transacting and Visitors who register or use the services offered by TheDownFlix.</p>
+        </header>
+  
+        <div class="terms-section">
+          <h2>Personal Information Collected:</h2>
+          <h3>Automatic Collection</h3>
+          <p>
+            Our servers automatically recognize Visitors' domain names and IP addresses (the number assigned to computers on the Internet). This process does not reveal personal information about you. Additionally, the Site may collect anonymous "traffic data" that does not personally identify you but can help improve the services we provide and support our marketing efforts.
+          </p>
+  
+          <h3>Cookies</h3>
+          <p>
+            TheDownFlix may use cookies to store Visitor preferences and enhance the performance of our services. Cookies also help us analyze user behavior on our Site, enabling us to tailor services to better suit user needs.
+          </p>
+  
+          <h3>Voluntarily Provided Information</h3>
+          <p>
+            When you use TheDownFlix, you may voluntarily provide personal information, such as your email address. This information is used to process your requests and may be used to share updates or additional information in the future. We do not disclose personal information to third parties, except as specified in this policy.
+          </p>
+        </div>
+  
+        <div class="terms-section">
+          <h2>Use of Information Collected:</h2>
+          <p>
+            TheDownFlix uses the information voluntarily provided by users to improve their experience on our Site. This includes providing personalized or interactive elements and preparing future content based on user interests. Personal information will not be shared with third parties without your explicit permission.
+          </p>
+        </div>
+  
+        <div class="terms-section">
+          <h2>Data Security:</h2>
+          <p>
+            We implement reasonable measures to protect your personal information. However, no website or Internet transmission is entirely secure. While we strive to safeguard your data, we cannot guarantee that unauthorized access, hacking, data breaches, or data loss will never occur.
+          </p>
+        </div>
+  
+        <div class="terms-section">
+          <h2>Your Rights:</h2>
+          <p>
+            You may have rights under data protection laws concerning your personal data. These may include the right to:
+          </p>
+          <ul>
+            <li>Access, correct, or delete your personal information.</li>
+            <li>Restrict or object to data processing.</li>
+            <li>Transfer your data to another entity.</li>
+            <li>Withdraw consent where processing is based on your consent.</li>
+          </ul>
+          <p>
+            To exercise your rights, please contact us using the details provided below.
+          </p>
+        </div>
+  
+        <div class="terms-section">
+          <h2>Changes to This Privacy Policy:</h2>
+          <p>
+            TheDownFlix reserves the right to modify this privacy policy as needed to comply with legal requirements or to reflect changes in our business practices. If you have provided us with an email address, we will endeavor to notify you of any significant changes via email.
+          </p>
+        </div>
+  
+        <div class="terms-section">
+          <h2>Contact Us:</h2>
+          <p>If you have any questions about our Privacy Policy or your interactions with our website, please contact us at <a href="mailto:thedownflix@gmail.com">thedownflix@gmail.com</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+
+  <footer id="footer" class="footer position-relative">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="#hero" class="logo d-flex align-items-center">
+            <span class="sitename">TheDownFlix</span>
+          </a>
+    
+       
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#features">FAQ</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <ul>
+            <li><a href="{% url 'terms' %}"> Terms of Use</a></li>
+            <li><a href="{% url 'copy' %}"> Copyright</a></li>
+            <li><a href="{% url 'privacy' %}"> Privacy Policy</a></li>
+
+          </ul>
+        </div>
+
+      
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">TheDownFlix</strong><span></span></p>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js'%}"></script>
+  <script src="{% static 'vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js'%}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js'%}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'js/main.js'%}"></script>
+
+ 
+</body>
+
+</html>
